@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico"/>
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link  th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.css}" rel="stylesheet" />
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/dashboard.css" th:href="@{/css/dashboard.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<!--topbar-->
+<div th:replace="commons/bar::topbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <<!--sidebar-->
+        <div th:replace="commons/bar::#sidebar(activeUri='main.html')"></div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Dashboard</h1>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
